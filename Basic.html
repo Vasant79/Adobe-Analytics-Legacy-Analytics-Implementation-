@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://assets.adobedtm.com/e9875dd51dbe/3fb5784f8e84/launch-9ea2b69882a3-development.min.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <form onsubmit="return mySubmitHandler(event)">
+      <input type="email" />
+      <button>Submit</button>
+    </form>
+    <script>
+      function mySubmitHandler(event) {
+        // Prevent real submission and page refresh for test
+        event.preventDefault();
+        // Custom code: fire direct call or dataLayer/event for rules
+        // Example for Adobe Launch Direct Call Rule:
+        // _satellite.track("form-submit");
+        // Example for Web SDK (if rule is listening for submit event):
+        // alloy("sendEvent", {xdm: {/*...*/}, type: "web.form.submit"});
+        return false;
+      }
+    </script>
+  </body>
+</html>

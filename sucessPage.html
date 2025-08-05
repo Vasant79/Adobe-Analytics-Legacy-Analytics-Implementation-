@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success Conversion</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      .success-banner {
+        width: 100%;
+        max-width: 800px;
+        background-color: #2ecc71;
+        color: white;
+        text-align: center;
+        padding: 4rem 2rem;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .success-banner h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .success-banner p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+      }
+
+      .back-btn {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background-color: white;
+        color: #2ecc71;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #f4f4f4;
+      }
+
+      @media (max-width: 768px) {
+        .success-banner {
+          margin: 0 1rem;
+          padding: 3rem 1rem;
+        }
+
+        .success-banner h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success-banner">
+      <h1>Conversion Successful!</h1>
+      <p>
+        Thank you for your interest in our collection. We're excited to help you
+        find the perfect products that match your lifestyle and needs.
+      </p>
+      <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+  </body>
+</html>

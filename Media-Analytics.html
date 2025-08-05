@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Page</title>
+    <script
+      src="https://assets.adobedtm.com/e9875dd51dbe/d01e957679d1/launch-29ae3da2a385-development.min.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <h1>Play with the Videos</h1>
+    <div>
+      <video
+        id="myVideo"
+        data-title="Tiger Video"
+        width="320"
+        height="240"
+        controls
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2022/10/04/133593-757253067_large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <br />
+    </div>
+
+    <script>
+      let videoEl = document.getElementById("myVideo");
+
+      console.log(videoEl);
+
+      videoEl.addEventListener("click", function () {
+        play = videoEl.paused ? "pause" : "play";
+
+        console.log("Clicked! Play state:", play);
+
+        const videoName = videoEl.getAttribute("data-title");
+
+        window.adobedatalayer = window.adobedatalayer || [];
+        adobedatalayer.push({
+          event: "videoClick",
+          videoName: videoName,
+          action: play,
+        });
+
+        console.log("Pushed to Adobe Data Layer:", {
+          videoName: videoName,
+          action: play,
+        });
+      });
+    </script>
+  </body>
+</html>
